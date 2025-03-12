@@ -108,6 +108,7 @@ img {
 .l-header {
   width: 100%;
   position: fixed;
+
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
@@ -183,6 +184,8 @@ img {
 .home {
   position: relative;
   row-gap: 5rem;
+  display: flex;
+  gap: 150px;
   padding: 4rem 0 5rem;
 }
 .home__data {
@@ -310,6 +313,8 @@ img {
 /* ===== WORK =====*/
 .work__container {
   row-gap: 2rem;
+  border: none;
+  
 }
 .work__img {
   box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
