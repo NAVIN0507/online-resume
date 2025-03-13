@@ -181,12 +181,12 @@ img {
   background-color: black;
 }
 
-/*=== Show menu ===*/
+
 .show {
   right: 0;
 }
 
-/*===== HOME =====*/
+
 .home {
   position: relative;
   row-gap: 5rem;
@@ -301,13 +301,13 @@ img {
   z-index: var(--z-back);
 }
 .skills__html {
-  width: 95%;
+  width: 75%;
 }
 .skills__css {
   width: 85%;
 }
 .skills__js {
-  width: 65%;
+  width: 75%;
 }
 .skills__ux {
   width: 85%;
@@ -325,7 +325,7 @@ img {
   width: 60%;
 }
 .skills__rn{
-  width: 85%;
+  width: 75%;
 }
 .skills__ho{
   width: 50%;
@@ -583,4 +583,8 @@ img {
 
 .contact_button:hover {
   background-color: darken(black, 10%);
+}
+.projects{
+  background-color: black;
+  color: white;
 }
