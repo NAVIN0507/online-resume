@@ -1,27 +1,25 @@
-/*===== GOOGLE FONTS =====*/
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
-/*===== VARIABLES CSS =====*/
+
 :root {
   --header-height: 3rem;
   --font-semi: 600;
-  /*===== Colores =====*/
-  /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
-  /* HSL color mode */
+ 
   --hue-color: 224;
   --first-color: hsl(var(--hue-color), 89%, 60%);
   --second-color: hsl(var(--hue-color), 56%, 12%);
-  /*===== Fuente y tipografia =====*/
+
   --body-font: "Poppins", sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: .938rem;
   --smaller-font-size: .75rem;
-  /*===== Margenes =====*/
+
   --mb-2: 1rem;
   --mb-4: 2rem;
   --mb-5: 2.5rem;
   --mb-6: 3rem;
-  /*===== z index =====*/
+
   --z-back: -10;
   --z-fixed: 100;
 }
@@ -34,7 +32,7 @@
   }
 }
 
-/*===== BASE =====*/
+
 *, ::before, ::after {
   box-sizing: border-box;
 }
@@ -70,7 +68,7 @@ img {
   display: block;
 }
 
-/*===== CLASS CSS ===== */
+
 .section-title {
   position: relative;
   font-size: var(--h2-font-size);
@@ -97,7 +95,7 @@ img {
   padding-bottom: 2rem;
 }
 
-/*===== LAYOUT =====*/
+
 .bd-grid {
   max-width: 1024px;
   display: grid;
@@ -116,7 +114,7 @@ img {
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 }
 
-/*===== NAV =====*/
+
 .nav {
   height: var(--header-height);
   display: flex;
@@ -135,11 +133,15 @@ img {
     background-color: var(--second-color);
     transition: 0.5s;
   }
-  .home__img {
+  .home{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  /* Mobile NAV */
+  .home__img { 
   display: none;
-  right: 0;
-  bottom: 0;
-  width: 260px;
+  
 }
 }
 .nav__item {
@@ -170,7 +172,7 @@ img {
   cursor: pointer;
 }
 
-/*Active menu*/
+
 .active-link::after {
   position: absolute;
   content: "";
@@ -191,11 +193,13 @@ img {
   position: relative;
   row-gap: 5rem;
   display: flex;
-  gap: 150px;
+  align-items: center;
+  flex-direction: row;
   padding: 4rem 0 5rem;
 }
 .home__data {
   align-self: center;
+ 
 }
 .home__title {
   font-size: var(--big-font-size);
@@ -230,7 +234,7 @@ img {
   width: 360px;
 }
 
-/*BUTTONS*/
+
 .button {
   display: inline-block;
   background-color: black;
@@ -244,7 +248,7 @@ img {
   box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
 }
 
-/* ===== ABOUT =====*/
+
 .about__container {
   row-gap: 2rem;
   text-align: center;
@@ -260,7 +264,7 @@ img {
   border-radius: 0.5rem;
 }
 
-/* ===== SKILLS =====*/
+
 .skills__container {
   row-gap: 2rem;
   text-align: center;
@@ -330,7 +334,7 @@ img {
 .skills__ho{
   width: 50%;
 }
-/* ===== WORK =====*/
+
 .work__container {
   row-gap: 2rem;
   border: none;
@@ -348,7 +352,7 @@ img {
   transform: scale(1.1);
 }
 
-/* ===== CONTACT =====*/
+
 .contact__input {
   width: 100%;
   font-size: var(--normal-font-size);
@@ -368,7 +372,7 @@ img {
   margin-left: auto;
 }
 
-/* ===== FOOTER =====*/
+
 .footer {
   background-color: black;
   color: #fff;
@@ -392,13 +396,13 @@ img {
   font-size: var(--smaller-font-size);
 }
 
-/* ===== MEDIA QUERIES=====*/
+
 @media screen and (max-width: 320px) {
   .home {
     row-gap: 3rem;
   }
   .home__img {
-    display: none;
+    display: block;
     width: 200px;
   }
 }
@@ -417,7 +421,7 @@ img {
     margin-right: var(--mb-4);
   }
   .home__img {
-    
+    display: block;
     width: 300px;
     bottom: 25%;
   }
@@ -479,8 +483,10 @@ img {
   }
   .home {
     padding: 8rem 0 2rem;
+    margin-left: 100px;
   }
   .home__img {
+    display: block;
     width: 400px;
     bottom: 10%;
   }
@@ -510,6 +516,7 @@ img {
     padding: 10rem 0 2rem;
   }
   .home__img {
+    display: block;
     width: 450px;
   }
 }
@@ -587,4 +594,19 @@ img {
 .projects{
   background-color: black;
   color: white;
+}
+.home__img {
+  display: block;
+  right: 0;
+  bottom: 0;
+  width: 320px;
+  
+  margin-left: 80px;
+}
+
+
+@media screen and (max-width: 767px) {
+  .home__img {
+    display: none; 
+  }
 }
