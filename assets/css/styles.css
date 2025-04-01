@@ -610,11 +610,3 @@ img {
     display: none; 
   }
 }
-.work__item2{
-  background-color: #f9f9f9;
-  border: 2px solid black;
-  border-radius: 8px;
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s;
-}
